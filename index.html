@@ -18,7 +18,7 @@
   			$(document).ready(function(){
 					$.get({url: "http://api.exitsoft.kr:8888/recent/one", success: function(result){
 						// console.log();
-		      	$("#result").append(`<h2>"저는 지금 ${result.result[0].whereami}에 있어요!"</h2><p>마지막 대여자 : ${result.result[0].whoami}</p>`);
+		      	$("#result").append(`<h3>저는 지금<br>${result.result[0].whereami}에 있어요!</h3><p>마지막 대여자 : ${result.result[0].whoami}</p>`);
 		    	}});
 				});
 
