@@ -12,10 +12,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     
 
-		<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-		<link rel="manifest" href="./site.webmanifest">
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+		<link rel="manifest" href="./assets/site.webmanifest">
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="theme-color" content="#ffffff">
 
@@ -25,8 +25,8 @@
   <body>
   	<nav class="navbar navbar-light bg-light" style="margin-bottom: 10px;">
 			  <a class="navbar-brand" href="#" style=" display: flex; align-items: center;">
-			    <img src="./android-chrome-512x512.png" width="40" height="40" class="d-inline-block align-top" alt="" style="border-radius: 8px; margin-right: 10px;">
-			    <span>포러리는 어디에</span>
+			    <img src="./assets/android-chrome-512x512.png" width="40" height="40" class="d-inline-block align-top" alt="" style="border-radius: 100px; margin-right: 10px;">
+			    <span>포러리는 어디에?</span>
 			  </a>
 			</nav>
   	<div class="container">
@@ -34,7 +34,7 @@
   			$(document).ready(function(){
 					$.get({url: "http://api.exitsoft.kr:8888/recent/one", success: function(result){
 						// console.log();
-		      	$("#result").append(`<h3>저는 지금<br>${result.result[0].whereami}에 있어요!</h3><p>마지막 대여자 : ${result.result[0].whoami}</p>`);
+		      	$("#result").append(`<h3>저는 지금<br>${result.result[0].whereami}에 있어요!</h3><p>마지막 대여자 : <span><img src="./assets/people/${result.result[0].whoami}.jpeg" width="40" height="40" style="border-radius: 100px; margin-right: 10px;" ></img><span></p>`);
 		    	}});
 				});
 
